@@ -41,19 +41,13 @@
                 </div>
             </div>
             
-          
-            <div id="all-results" class="search-result col-md-8 mx-auto py-4">
+        <div id="all-results" class="search-result col-md-8 mx-auto py-4">
               
-            </div>
+         </div>
             
+        <div id="lyrics">
 
-
-            <div id="lyrics">
-
-            </div>
-            
-
-
+         </div>
         </main>
     </div>
     <!-- Optional JavaScript -->
@@ -62,12 +56,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-   
     <script>
-    
     document.getElementById('search-music').addEventListener('click', searchMusic);
-    
-    
     function searchMusic(){
         document.getElementById('all-results').innerHTML = '';
         document.getElementById('lyrics').innerHTML = '';
@@ -110,7 +100,7 @@
                 .then(data => {
                     let lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
                     if(lyrics == undefined){
-                       lyrics = `Song Lyrics Not Found. Try for another song`;
+                       lyrics = `Sorry, Lyrics Not Found`;
                     }
                     
                     document.getElementById('lyrics').innerHTML = `<div class="single-lyrics text-center">
